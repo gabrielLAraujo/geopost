@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>GeoPost</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- <link rel="stylesheet" href="resources/CSS/bootstrap.min.css" /> -->
+
+</head>
+
+<body>
+
+  <div class="jumbotron container text-center" style="text-align: center">
+    <h1>Campeonato GeoPost</h1>
+  </div>
+  <div class="container">
+    <form onsubmit="partidaController.criaCampeonato(event)">
+
+      <div class="row" style="text-align: center">
+        <label class="control-label" for="text_timesRegioes">Insira os Times e Regiões do Campeonato</label>
+        <br>
+        <textarea style="resize: none" placeholder="Times e Regiões separados por ;" class="form-control" name="text_timesRegioes"
+          id="text_timesRegioes" cols="160" rows="5" required></textarea>
+      </div>
+      <br>
+      <div class="row" style="text-align: center">
+        <button type="submit" class="btn btn-primary">submit</button>
+      </div>
+
+    </form>
+    <div style="float: left" id="combinacaoETabelaDeJogos">
+    </div>
+    <div style="float: left" id="tabelaCampeoanto">
+    </div>
+  </div>
+
+
+
+  <script src="controllers/PartidaController.js"></script>
+  <script src="helpers/FormataStrings.js"></script>
+  <script src="models/Partidas.js"></script>
+  <script src="models/Partida.js"></script>
+  <script src="models/Time.js"></script>
+  <script src="models/Times.js"></script>
+  <script src="views/PartidasView.js"></script>
+  <script src="views/TimesView.js"></script>
+
+  <script>
+    let partidaController = new PartidaController();
+  </script>
+</body>
+
+</html>
